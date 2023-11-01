@@ -81,7 +81,7 @@
                                     <input type="number" id="quantity" value="1" min="1">
                                 </div>
                                 <a href="menu.php" class="btn" onclick="addToCart(this)"
-                                    data-pizza-name="Chicken Supreme">Add</a>
+                                    data-pizza-name="Margherita">Add</a>
                             </div>
                         </div>
                     </div>
@@ -155,7 +155,7 @@
             <div class="cart-boxes" id="cartContent">
                 <!-- Cart items will be displayed here -->
             </div>
-            <p>Total: $<span id="cartTotal">0.00</span></p>
+            <p>Total: <span id="cartTotal">0.00</span></p>
         </div>
 
     </div>

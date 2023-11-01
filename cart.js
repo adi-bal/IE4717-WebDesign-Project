@@ -31,8 +31,12 @@ cartIcon.addEventListener('click', () => {
 });
 
 
+// Initialize an empty cart object to store items
+const cart = {};
+
 // Function to add an item to the cart
 function addToCart(button) {
+    event.preventDefault(); // Prevent the default anchor behavior
     const parent = button.closest(".food-image");
     const pizzaName = button.dataset.pizzaName;
     const size = parent.querySelector("#size").value;
@@ -45,17 +49,32 @@ function addToCart(button) {
 
         if (price) {
             const totalPrice = price * quantity;
-            const cartItem = {
-                name: pizzaName,
-                size: size,
-                quantity: quantity,
-                price: totalPrice,
-            };
 
-            displayCartItem(cartItem);
+            // Check if the item is already in the cart
+            if (cart[pizzaName] && cart[pizzaName][size]) {
+                cart[pizzaName][size].quantity += quantity;
+                cart[pizzaName][size].price += totalPrice;
+            } else {
+                // If it's a new item, add it to the cart
+                if (!cart[pizzaName]) {
+                    cart[pizzaName] = {};
+                }
 
-            // Show the cart container after adding an item
+                cart[pizzaName][size] = {
+                    name: pizzaName,
+                    size: size,
+                    quantity: quantity,
+                    price: totalPrice,
+                };
+            }
+
+            // Update the cart UI
+            updateCartUI();
+
+            // Show the cart container
+            const cartContainer = document.getElementById('cartContainer');
             cartContainer.style.display = 'block';
+
         } else {
             alert("Invalid size selected");
         }
@@ -63,6 +82,44 @@ function addToCart(button) {
         alert("Pizza not found");
     }
 }
+
+// Function to update the cart UI
+function updateCartUI() {
+    const cartContent = document.getElementById('cartContent');
+    cartContent.innerHTML = '';
+
+    let total = 0;
+
+    for (const pizzaName in cart) {
+        for (const size in cart[pizzaName]) {
+            const cartItem = cart[pizzaName][size];
+
+            const cartItemElement = document.createElement('li');
+            cartItemElement.classList.add('cart-item');
+
+// Add CSS styles to remove list styling
+cartItemElement.style.listStyle = 'none';
+cartItemElement.style.padding = '0';
+
+            cartItemElement.innerHTML = `
+                <div class="cart-item-name">${cartItem.name}</div>
+                <div class="cart-item-details">
+                    <span>Size: ${cartItem.size}</span>
+                    <span>Quantity: ${cartItem.quantity}</span>
+                </div>
+                <div class="cart-item-price">$${cartItem.price.toFixed(2)}</div>
+            `;
+
+            cartContent.appendChild(cartItemElement);
+            total += cartItem.price;
+        }
+    }
+
+    const cartTotalElement = document.getElementById('cartTotal');
+    cartTotalElement.textContent = `$${total.toFixed(2)}`;
+}
+
+
 
 
 // Function to display a cart item in the cart container
@@ -89,23 +146,73 @@ function displayCartItem(cartItem) {
     updateCartTotal();
 }
 
+
+
+
+
+
+
+
+// Define an array to store the cart items
+const cartItems = [];
+
+// Function to display a cart item in the cart container
+function displayCartItem(cartItem) {
+    const cartContent = document.getElementById('cartContent');
+    
+    // Check if the item is already in the cart
+    const existingItem = cartItems.find(item => item.name === cartItem.name && item.size === cartItem.size);
+    
+    if (existingItem) {
+        // If the item already exists, update its quantity and price
+        existingItem.quantity += cartItem.quantity;
+        existingItem.price += cartItem.price;
+    } else {
+        // If it's a new item, push it to the cartItems array
+        cartItems.push(cartItem);
+    }
+
+    // Update the cart content
+    renderCartContent(cartContent);
+
+    // Update the total price in the cart
+    updateCartTotal();
+}
+
+// Function to render the cart content based on the cartItems array
+function renderCartContent(cartContent) {
+    cartContent.innerHTML = '';
+
+    for (const cartItem of cartItems) {
+        const cartItemElement = document.createElement('li');
+        cartItemElement.classList.add('cart-item');
+        cartItemElement.innerHTML = `
+            <div class="cart-item-name">${cartItem.name}</div>
+            <div class="cart-item-details">
+                <span>Size: ${cartItem.size}</span>
+                <span>Quantity: ${cartItem.quantity}</span>
+            </div>
+            <div class="cart-item-price">$${cartItem.price.toFixed(2)}</div>
+        `;
+
+        cartContent.appendChild(cartItemElement);
+    }
+}
+
 // Function to update the total price in the cart
 function updateCartTotal() {
-    const cartContent = document.getElementById('cartContent');
     const cartTotalElement = document.getElementById('cartTotal');
-
-    // Calculate the total price based on cart items
+    
+    // Calculate the total price based on the cartItems array
     let total = 0;
-    const cartItems = cartContent.getElementsByClassName('cart-item');
     for (const cartItem of cartItems) {
-        const priceString = cartItem.querySelector('.cart-item-price').textContent;
-        const price = parseFloat(priceString.replace('$', ''));
-        total += price;
+        total += cartItem.price;
     }
 
     // Update the total price in the cart
     cartTotalElement.textContent = `$${total.toFixed(2)}`;
 }
+
 
 
 
