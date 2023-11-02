@@ -206,7 +206,7 @@ function checkout() {
     localStorage.setItem('cartData', JSON.stringify(cart));
 
     // Redirect to the checkout page
-    window.location.href = 'Checkout.html';
+    window.location.href = 'checkout.php';
 }
 
 
