@@ -19,10 +19,6 @@
             <a href="contact.php">Contact</a>
             <a href="feedback.php">Feedback</a>
         </nav>
-        <div class="activity-section" id="cartIcon">
-            <i class='bx bx-cart'></i>
-        </div>
-
         <button class="btn">Login</button>
     </header>
 
@@ -31,14 +27,14 @@
 
             <div class="dishGallery">
                 <div class="food-category">
-                    <h2>Originals</h2>
+                    <h2>All-time Favourites</h2>
                 </div>
                 <div class="food-row-one">
 
                     <div class="food-image">
-                        <img src="ChickenS.png" alt="">
+                        <img src="HawaiianS.png" alt="">
                         <div class="inner-text">
-                            <h2>Chicken Supreme</h2>
+                            <h2>Special Hawaiian</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
                                 suscipit perspiciatis veniam!</p>
                             <div class="price-section">
@@ -55,16 +51,16 @@
                                     <input type="number" id="quantity" value="1" min="1">
                                 </div>
                                 <a href="menu.php" class="btn" onclick="addToCart(this)"
-                                    data-pizza-name="Chicken Supreme">Add</a>
+                                    data-pizza-name="Special Hawaiian">Add</a>
                             </div>
                         </div>
                     </div>
 
 
                     <div class="food-image">
-                        <img src="ChickenS.png" alt="">
+                        <img src="Ham.png" alt="">
                         <div class="inner-text">
-                            <h2>Margherita</h2>
+                            <h2>Ultimate Ham</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
                                 suscipit perspiciatis veniam!</p>
                             <div class="price-section">
@@ -81,70 +77,170 @@
                                     <input type="number" id="quantity" value="1" min="1">
                                 </div>
                                 <a href="menu.php" class="btn" onclick="addToCart(this)"
-                                    data-pizza-name="Margherita">Add</a>
+                                    data-pizza-name="Ultimate Ham">Add</a>
                             </div>
                         </div>
                     </div>
 
 
                     <div class="food-image">
-                        <img src="ChickenS.png" alt="">
+                        <img src="Pepperoni.png" alt="">
                         <div class="inner-text">
-                            <h2>Chicken Supreme</h2>
+                            <h2>Classic Pepperoni</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                                suscipit
-                                perspiciatis veniam!</p>
+                                suscipit perspiciatis veniam!</p>
                             <div class="price-section">
-                                <span>$5.50</span>
-                                <a href="menu.php" class="btn">Buy Now</a>
+                                <div>
+                                    <label for="size">Size:</label>
+                                    <select id="size">
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="quantity">Quantity:</label>
+                                    <input type="number" id="quantity" value="1" min="1">
+                                </div>
+                                <a href="menu.php" class="btn" onclick="addToCart(this)"
+                                    data-pizza-name="Classic Pepperoni">Add</a>
                             </div>
                         </div>
                     </div>
+
 
                 </div>
                 <div class="food-category">
-                    <h2>Classics</h2>
+                    <h2>Originals</h2>
                 </div>
                 <div class="food-row-two">
                     <div class="food-image">
-                        <img src="ChickenS.png" alt="">
+                        <img src="Hawaiian.png" alt="">
                         <div class="inner-text">
-                            <h2>Chicken Supreme</h2>
+                            <h2>Hawaiian</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                                suscipit
-                                perspiciatis veniam!</p>
+                                suscipit perspiciatis veniam!</p>
                             <div class="price-section">
-                                <span>$5.50</span>
-                                <a href="menu.php" class="btn">Buy Now</a>
+                                <div>
+                                    <label for="size">Size:</label>
+                                    <select id="size">
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="quantity">Quantity:</label>
+                                    <input type="number" id="quantity" value="1" min="1">
+                                </div>
+                                <a href="menu.php" class="btn" onclick="addToCart(this)"
+                                    data-pizza-name="Hawaiian">Add</a>
                             </div>
                         </div>
                     </div>
                     <div class="food-image">
-                        <img src="ChickenS.png" alt="">
+                        <img src="Tomato.png" alt="">
                         <div class="inner-text">
-                            <h2>Chicken Supreme</h2>
+                            <h2>Tomato Cheesy</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                                suscipit
-                                perspiciatis veniam!</p>
+                                suscipit perspiciatis veniam!</p>
                             <div class="price-section">
-                                <span>$5.50</span>
-                                <a href="menu.php" class="btn">Buy Now</a>
+                                <div>
+                                    <label for="size">Size:</label>
+                                    <select id="size">
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="quantity">Quantity:</label>
+                                    <input type="number" id="quantity" value="1" min="1">
+                                </div>
+                                <a href="menu.php" class="btn" onclick="addToCart(this)"
+                                    data-pizza-name="Tomato Cheesy">Add</a>
                             </div>
                         </div>
                     </div>
                     <div class="food-image">
-                        <img src="ChickenS.png" alt="">
+                        <img src="BarbequeC.png" alt="">
                         <div class="inner-text">
-                            <h2>Chicken Supreme</h2>
+                            <h2>Barbeque Chic</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                                suscipit
-                                perspiciatis veniam!</p>
+                                suscipit perspiciatis veniam!</p>
                             <div class="price-section">
-                                <span>$5.50</span>
-                                <a href="menu.php" class="btn">Buy Now</a>
+                                <div>
+                                    <label for="size">Size:</label>
+                                    <select id="size">
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="quantity">Quantity:</label>
+                                    <input type="number" id="quantity" value="1" min="1">
+                                </div>
+                                <a href="menu.php" class="btn" onclick="addToCart(this)"
+                                    data-pizza-name="Barbeque Chic">Add</a>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="food-category">
+                    <h2>Must-try!</h2>
+                </div>
+                <div class="food-row-three">
+                    <div class="food-image">
+                        <img src="Veggie.png" alt="">
+                        <div class="inner-text">
+                            <h2>Veggie Overload</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
+                                suscipit perspiciatis veniam!</p>
+                            <div class="price-section">
+                                <div>
+                                    <label for="size">Size:</label>
+                                    <select id="size">
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="quantity">Quantity:</label>
+                                    <input type="number" id="quantity" value="1" min="1">
+                                </div>
+                                <a href="menu.php" class="btn" onclick="addToCart(this)"
+                                    data-pizza-name="Veggie Overload">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-image">
+                        <img src="Cheesy.png" alt="">
+                        <div class="inner-text">
+                            <h2>Cheesy Heaven</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
+                                suscipit perspiciatis veniam!</p>
+                            <div class="price-section">
+                                <div>
+                                    <label for="size">Size:</label>
+                                    <select id="size">
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="quantity">Quantity:</label>
+                                    <input type="number" id="quantity" value="1" min="1">
+                                </div>
+                                <a href="menu.php" class="btn" onclick="addToCart(this)"
+                                    data-pizza-name="Cheesy Heaven">Add</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -155,7 +251,7 @@
             <div class="cart-boxes" id="cartContent">
                 <!-- Cart items will be displayed here -->
             </div>
-            <p>Total: <span id="cartTotal">0.00</span></p>
+            <p><b> Total: </b><span id="cartTotal">0.00</span></p>
         </div>
 
     </div>

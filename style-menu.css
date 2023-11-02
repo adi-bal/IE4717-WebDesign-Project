@@ -299,8 +299,8 @@ align-items: center;
     
 }
 
-/* Style for .food-row-one and .food-row-two */
-.food-row-one, .food-row-two {
+/* Style for .food-row-x */
+.food-row-one, .food-row-two, .food-row-three {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -371,9 +371,10 @@ footer {
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    height: 700px;
-    /* Other styling properties as needed */
+    max-height: 700px; /* Set a maximum height for the cart container */
+    overflow-y: auto; /* Add vertical scroll when content exceeds the max height */
 }
+
 
 
 

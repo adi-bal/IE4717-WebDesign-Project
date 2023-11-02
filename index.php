@@ -49,12 +49,23 @@
         <div class="dishGallery">
             <div class="food-row-one">
                 <div class="food-image">
-                    <img src="ChickenS.png" alt="">
+                    <img src="HawaiianS.png" alt="">
                     <div class="inner-text">
-                        <h2>Chicken Supreme</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                            suscipit
-                            perspiciatis veniam!</p>
+                        <h2>Special Hawaiian</h2>
+                        <p>Loaded with Mozzarella Cheese with Succulent Smoked Chicken Breast, Chicken Ham and Juicy
+                            Pineapples. Starts at $7.00</p>
+                        <div class="price-section">
+                            <span>$7.00</span>
+                            <a href="menu.php" class="btn">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-image">
+                    <img src="BarbequeC.png" alt="">
+                    <div class="inner-text">
+                        <h2>Barbeque Chic</h2>
+                        <p>Loaded with Mozzarella Cheese, Succulent Smoked Chicken Breast, Onion, Green Pepper and BBQ
+                            Sauce. Starts at $5.50</p>
                         <div class="price-section">
                             <span>$5.50</span>
                             <a href="menu.php" class="btn">Buy Now</a>
@@ -62,40 +73,26 @@
                     </div>
                 </div>
                 <div class="food-image">
-                    <img src="ChickenS.png" alt="">
+                    <img src="Pepperoni.png" alt="">
                     <div class="inner-text">
-                        <h2>Chicken Supreme</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                            suscipit
-                            perspiciatis veniam!</p>
+                        <h2>Classic Pepperoni</h2>
+                        <p>The all time classic loaded with Mozzarella Cheese and enormous portions of Beef Pepperoni.
+                            Starts at $6.00
+                        </p>
                         <div class="price-section">
-                            <span>$5.50</span>
+                            <span>$6.00</span>
                             <a href="menu.php" class="btn">Buy Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="food-image">
-                    <img src="ChickenS.png" alt="">
+                    <img src="Cheesy.png" alt="">
                     <div class="inner-text">
-                        <h2>Chicken Supreme</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                            suscipit
-                            perspiciatis veniam!</p>
+                        <h2>Cheesy Heaven</h2>
+                        <p>Tons of Mozzarella Cheese, Oregano and Parmesan Cheese. Never enough cheese! Starts at $4.50
+                        </p>
                         <div class="price-section">
-                            <span>$5.50</span>
-                            <a href="menu.php" class="btn">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="food-image">
-                    <img src="ChickenS.png" alt="">
-                    <div class="inner-text">
-                        <h2>Chicken Supreme</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                            suscipit
-                            perspiciatis veniam!</p>
-                        <div class="price-section">
-                            <span>$5.50</span>
+                            <span>$4.50</span>
                             <a href="menu.php" class="btn">Buy Now</a>
                         </div>
                     </div>
@@ -104,53 +101,47 @@
 
             <div class="food-row-two">
                 <div class="food-image">
-                    <img src="ChickenS.png" alt="">
+                    <img src="Hawaiian.png" alt="">
                     <div class="inner-text">
-                        <h2>Chicken Supreme</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                            suscipit
-                            perspiciatis veniam!</p>
+                        <h2>Hawaiian</h2>
+                        <p>100% Mozarella Cheese, pineapples and chicken ham. Pizzalia Classic. Starts at $5.00</p>
                         <div class="price-section">
-                            <span>$5.50</span>
+                            <span>$5.00</span>
                             <a href="menu.php" class="btn">Buy Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="food-image">
-                    <img src="ChickenS.png" alt="">
+                    <img src="Tomato.png" alt="">
                     <div class="inner-text">
-                        <h2>Chicken Supreme</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                            suscipit
-                            perspiciatis veniam!</p>
+                        <h2>Tomato Cheesy</h2>
+                        <p>Made with the freshest hand picked tomatos topped with top quality tomato sauce and cheese.
+                            Starts at $5.60</p>
                         <div class="price-section">
-                            <span>$5.50</span>
+                            <span>$5.60</span>
                             <a href="menu.php" class="btn">Buy Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="food-image">
-                    <img src="ChickenS.png" alt="">
+                    <img src="Ham.png" alt="">
                     <div class="inner-text">
-                        <h2>Chicken Supreme</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                            suscipit
-                            perspiciatis veniam!</p>
+                        <h2>Ultimate Ham</h2>
+                        <p>Tons of fresh ham, succulent mushrooms, amazing cheese and fresh tomatoes. Starts at $6.80
+                        </p>
                         <div class="price-section">
-                            <span>$5.50</span>
+                            <span>$6.80</span>
                             <a href="menu.php" class="btn">Buy Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="food-image">
-                    <img src="ChickenS.png" alt="">
+                    <img src="Veggie.png" alt="">
                     <div class="inner-text">
-                        <h2>Chicken Supreme</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                            suscipit
-                            perspiciatis veniam!</p>
+                        <h2>Veggie Overload</h2>
+                        <p>Made with the freshest vegetables. Topped with olives and mushrooms. Starts at $5.00 </p>
                         <div class="price-section">
-                            <span>$5.50</span>
+                            <span>$5.00</span>
                             <a href="menu.php" class="btn">Buy Now</a>
                         </div>
                     </div>
