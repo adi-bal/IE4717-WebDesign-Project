@@ -35,8 +35,8 @@
                         <img src="HawaiianS.png" alt="">
                         <div class="inner-text">
                             <h2>Special Hawaiian</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                                suscipit perspiciatis veniam!</p>
+                            <p>Loaded with Mozzarella Cheese with Succulent Smoked Chicken Breast, Chicken Ham and Juicy
+                                Pineapples. S-$7, M-$16, L-$30</p>
                             <div class="price-section">
                                 <div>
                                     <label for="size">Size:</label>
@@ -61,8 +61,8 @@
                         <img src="Ham.png" alt="">
                         <div class="inner-text">
                             <h2>Ultimate Ham</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                                suscipit perspiciatis veniam!</p>
+                            <p>Tons of fresh ham, succulent mushrooms, amazing cheese and fresh tomatoes. S-$6.80,
+                                M-$16, L-$31</p>
                             <div class="price-section">
                                 <div>
                                     <label for="size">Size:</label>
@@ -87,8 +87,9 @@
                         <img src="Pepperoni.png" alt="">
                         <div class="inner-text">
                             <h2>Classic Pepperoni</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                                suscipit perspiciatis veniam!</p>
+                            <p>The all time classic loaded with Mozzarella Cheese and enormous portions of Beef
+                                Pepperoni.
+                                S-$6, M-$12.50, L-$24</p>
                             <div class="price-section">
                                 <div>
                                     <label for="size">Size:</label>
@@ -118,8 +119,8 @@
                         <img src="Hawaiian.png" alt="">
                         <div class="inner-text">
                             <h2>Hawaiian</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                                suscipit perspiciatis veniam!</p>
+                            <p>100% Mozarella Cheese, pineapples and chicken ham. Pizzalia Classic. S-$5, M-$11, L-$22
+                            </p>
                             <div class="price-section">
                                 <div>
                                     <label for="size">Size:</label>
@@ -142,8 +143,9 @@
                         <img src="Tomato.png" alt="">
                         <div class="inner-text">
                             <h2>Tomato Cheesy</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                                suscipit perspiciatis veniam!</p>
+                            <p>Made with the freshest hand picked tomatos topped with top quality tomato sauce and
+                                cheese.
+                                S-$5.60, M-$11, L-$20</p>
                             <div class="price-section">
                                 <div>
                                     <label for="size">Size:</label>
@@ -166,8 +168,9 @@
                         <img src="BarbequeC.png" alt="">
                         <div class="inner-text">
                             <h2>Barbeque Chic</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                                suscipit perspiciatis veniam!</p>
+                            <p>Loaded with Mozzarella Cheese, Succulent Smoked Chicken Breast, Onion, Green Pepper and
+                                BBQ
+                                Sauce. S-$5.50, M-$13, L-$24</p>
                             <div class="price-section">
                                 <div>
                                     <label for="size">Size:</label>
@@ -196,8 +199,8 @@
                         <img src="Veggie.png" alt="">
                         <div class="inner-text">
                             <h2>Veggie Overload</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                                suscipit perspiciatis veniam!</p>
+                            <p>Made with the freshest vegetables. Topped with olives and mushrooms. S-$5.70, M-$12,
+                                L-$22</p>
                             <div class="price-section">
                                 <div>
                                     <label for="size">Size:</label>
@@ -220,8 +223,8 @@
                         <img src="Cheesy.png" alt="">
                         <div class="inner-text">
                             <h2>Cheesy Heaven</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consequuntur illo, nulla
-                                suscipit perspiciatis veniam!</p>
+                            <p>Tons of Mozzarella Cheese, Oregano and Parmesan Cheese. Never enough cheese! S-$4.50,
+                                M-$10, L-$20</p>
                             <div class="price-section">
                                 <div>
                                     <label for="size">Size:</label>
