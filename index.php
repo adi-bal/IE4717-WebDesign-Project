@@ -139,7 +139,8 @@
                     <img src="Veggie.png" alt="">
                     <div class="inner-text">
                         <h2>Veggie Overload</h2>
-                        <p>Made with the freshest vegetables. Topped with olives and mushrooms. Starts at $5.00 </p>
+                        <p>Made with the freshest vegetables. Topped with hand-picked olives and mushrooms. Starts at
+                            $5.00 </p>
                         <div class="price-section">
                             <span>$5.00</span>
                             <a href="menu.php" class="btn">Buy Now</a>
