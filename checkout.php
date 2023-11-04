@@ -1,3 +1,8 @@
+<?php
+    // Start the session
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,21 +24,61 @@
             <a href="contact.php">Contact</a>
             <a href="feedback.php">Feedback</a>
         </nav>
-        <button class="btn">Login</button>
+        <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
+        <!-- Display user's full name and logout button -->
+        <div class="user-info">
+            <span>Welcome, <?php echo htmlspecialchars($_SESSION['fullname']); ?>!</span>
+            <button class="btn" onclick="location.href='logout.php'">Logout</button>
+        </div>
+    <?php else: ?>
+        <!-- Display login button -->
+        <button class="btn" onclick="location.href='login.php'">Login</button>
+    <?php endif; ?>
     </header>
 
     <div class="main-container">
         <section class="Dishes-section">
-
             <div class="dishGallery">
                 <div class="food-category">
                     <h2>My Details</h2>
+                    <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin']): ?>
+                    <form action="submit-order.php" method="post" onsubmit="submitOrder()">
+                        <div class="user-details">
+                            <div class="input-box">
+                                <span class="details">Full Name</span>
+                                <input type="text" name="fullname" value="<?php echo htmlspecialchars($_SESSION['fullname']); ?>" readonly>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Email</span>
+                                <input type="email" name="email" value="<?php echo htmlspecialchars($_SESSION['email']); ?>" readonly>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Mobile Number</span>
+                                <input type="tel" name="mobile" placeholder="Enter your mobile number" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Delivery Address</span>
+                                <input type="text" name="address" placeholder="Enter your delivery address" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Delivery Time</span>
+                                <input type="time" name="delivery_time" required>
+                            </div>
+                            <div class="button">
+                                <input type="submit" value="Place Order">
+                            </div>
+                            <input type="hidden" id="cartContent" name="cartContent">
+                            <input type="hidden" id="cartTotal" name="cartTotal">
+                        </div>
+                    </form>
+                    <?php else: ?>
+                    <p>You must be logged in to place an order.</p>
+                    <button class="btn" onclick="window.location.href='login.php'">Login</button>
+                    <?php endif; ?>
 
 
                 </div>
             </div>
-
-
         </section>
         <div class="cart-container" id="cartContainer">
             <h2>Order Details</h2>
@@ -42,8 +87,6 @@
         </div>
 
     </div>
-
-
 
     <footer>
         <div class="innerItem">

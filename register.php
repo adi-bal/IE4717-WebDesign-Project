@@ -10,7 +10,7 @@
 <body>
 
     <header class="header">
-        <a href="#" class="Logo">Pizzalia<span>lia</span></a>
+        <a href="#" class="Logo">Pizza<span>lia</span></a>
         <nav class="navbar">
             <a href="index.php">Home</a>
             <a href="menu.php">Menu</a>
@@ -26,7 +26,7 @@
                 <h2>Create Your Account</h2>
                 <form class="login-form" action="register-process.php" method="post">
                     <div class="form-group">
-                        <label for="username">Username:</label>
+                        <label for="username">Full name:</label>
                         <input type="text" id="username" name="username" required>
                     </div>
                     <div class="form-group">

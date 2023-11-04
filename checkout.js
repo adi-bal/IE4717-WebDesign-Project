@@ -44,6 +44,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Display the total price on the checkout page
             checkoutCartTotal.innerHTML = `<strong>Total:</strong> $${total.toFixed(2)}`;
+            document.getElementById('cartTotal').value = total.toFixed(2);
+            total_form = total;
         }
     } else {
         // Handle the case where the cart is empty
@@ -54,3 +56,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const cartContainer = document.getElementById('cartContainer');
 cartContainer.style.display = 'block';
+
+function submitOrder() {
+    // Assuming you're using innerText or innerHTML to store the cart content and total
+    document.getElementById('cartContent').value = document.getElementById('checkoutCartContent').innerText;
+    document.getElementById('cartTotal').value = total_form;
+    
+    // Now submit the form
+    document.getElementById('orderForm').submit();
+}
+
+

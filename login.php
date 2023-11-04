@@ -28,8 +28,8 @@
                 <h2>Login to Your Account</h2>
                 <form class="login-form" action="login-process.php" method="post">
                     <div class="form-group">
-                        <label for="username">Username:</label>
-                        <input type="text" id="username" name="username" required>
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address:</label>
