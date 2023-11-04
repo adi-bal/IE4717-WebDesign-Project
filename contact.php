@@ -1,3 +1,8 @@
+<?php
+    // Start the session
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +24,17 @@
             <a href="contact.php">Contact</a>
             <a href="feedback.php">Feedback</a>
         </nav>
-        <button class="btn">Login</button>
+        <!-- Check if the user is logged in -->
+        <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
+            <!-- Display user's full name and logout button -->
+            <div class="user-info">
+                <span>Welcome, <?php echo htmlspecialchars($_SESSION['fullname']); ?>!</span>
+                <button class="btn" onclick="location.href='logout.php'">Logout</button>
+            </div>
+        <?php else: ?>
+            <!-- Display login button -->
+            <button class="btn" onclick="location.href='login.php'">Login</button>
+        <?php endif; ?>
     </header>
 
     <div class="main-container">
