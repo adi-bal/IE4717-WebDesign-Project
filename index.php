@@ -20,7 +20,7 @@
             <a href="feedback.php">Feedback</a>
         </nav>
 
-        <button class="btn">Login</button>
+        <button class="btn" onclick="location.href='login.php'">Login</button>
     </header>
     <section class="home-section">
         <div class="text-content">
