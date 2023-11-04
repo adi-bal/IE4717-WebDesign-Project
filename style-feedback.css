@@ -349,7 +349,7 @@ align-items: center;
 
 .food-category {
     text-align: center;
-    z-index: 100;
+    z-index: 1;
 }
 
 footer {
@@ -394,6 +394,7 @@ footer {
 label[for="experience"] {
     vertical-align: top;
     display: block;
+    z-index: 1;
 }
 
 
