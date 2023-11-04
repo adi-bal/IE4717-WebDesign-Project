@@ -45,15 +45,6 @@ body{
     border-radius: 5px;
 }
 
-.activity-section {
-    color: #222;
-    font-size: 25px;
-    margin-right: 20px;
-    cursor: pointer;
-    padding: 10px;
-    transition: .3s;
-}
-
 .btn{
     height: 50px;
     width: 140px;
@@ -99,68 +90,6 @@ section{
     background: #e8e7e7;
 }
 
-.home-section{
-height:40vh;
-width:100%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-
-.home-section .text-content h5{
-    font-size: 20px;
-    color: #bb7b05;
-    font-weight: 600;
-}
-.home-section .text-content h2{
-    font-size: 75px;
-    color: #3d3f56;
-    font-weight: 500;
-}
-.home-section .text-content p{
-    max-width: 600px;
-    color: #222;
-    font-weight: 500;
-}
-.home-section .text-content .btn{
-    margin-top: 20px;
-}
-.home-section .image-section img{
-    width: 40vw;
-    animation: Bounce 4s ease forwards infinite;
-}
-@keyFrames Bounce{
-    0%{
-        transform: translateY(-24px);
-    }
-    50%{
-        transform: translateY(0px);
-    }
-    100%{
-        transform: translateY(-24px);
-    }
-}
-.home-section .image-section .shadow{
-    background: rgba(0,0,0,.4);
-    height: 20px;
-    border-radius: 50%;
-    box-shadow: 0 0 20px rgba(0,0,0,.4);
-    filter: blur(5px);
-    width: 40vw;
-    animation: BounceIn 4s ease forwards infinite;
-}
-@keyFrames BounceIn{
-    0%{
-        transform: translateY(24px) scale(.5);
-    }
-    50%{
-        transform: translateY(0px);
-    }
-    100%{
-        transform: translateY(24px) scale(.5);
-    }
-}
-
 .Dishes-section{
     display:flex;
     justify-content: space-between;
@@ -173,12 +102,6 @@ align-items: center;
 .heading{
     font-size: 36px;
     text-align: center;
-}
-
-/* Style for the section title */
-.Dishes-title {
-    text-align: center;
-    margin-bottom: 15rem; /* Add some spacing between the title and food rows */
 }
 
 .dishGallery{
@@ -206,151 +129,6 @@ align-items: center;
     font-size: 19px;
 }
 
-.dishGallery .food-image{
-    height: 350px;
-    width: 300px;
-    padding: 0 25px 0 0;
-    box-shadow: 0 0 3px #222;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    border-radius: 5px;
-    margin-left: 40px;
-}
-
-.food-image img{
-    width:300px;
-    height:290px;
-    position: absolute;
-    top: -52%;
-}
-
-/* Style for both spans and anchors within .price-section */
-.price-section {
-    margin-top: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-}
-
-.price-section select {
-    margin-bottom: 5px; /* Add space below the select elements */
-}
-
-.price-section input {
-    margin-bottom: 0px; /* Add more space below the input element */
-}
-
-.price-section .btn {
-    margin-top: 10px; /* Add more space below the input element */
-}
-
-.price-section span,
-.price-section a {
-    height: 35px;
-    width: 90px;
-    border: 2px solid #ad2525;
-    display: flex;
-    justify-content: center;
-    font-size: 15px;
-    border-radius: 50px;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    color: #ad2525;
-    background: transparent;
-    cursor: pointer;
-    text-decoration: none; /* Remove underline on anchors */
-    transition: .3s;
-}
-
-.price-section span:hover,
-.price-section a:hover {
-    color: #fff;
-}
-
-.price-section span:hover::before,
-.price-section a:hover::before {
-    width: 100%;
-}
-
-.price-section span::before,
-.price-section a::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    background: #ad2525;
-    z-index: -1;
-    transition: .3s;
-}
-
-.price-section span:nth-child(1),
-.price-section a:nth-child(1) {
-    background: #ad2525;
-    color: #fff;
-}
-
-
-.inner-text{
-    margin-left: 25px;
-    width:300px;
-    height:290px;
-    text-align: center;
-    margin-top: 110px;
-    max-width: 300px;
-    font-size: 15px;
-    max-width: 250px;
-}
-
-.inner-text h2{
-    font-size: 18px;
-}
-
-.inner-text p{
-    text-align: center;
-    
-}
-
-/* Style for .food-row-x */
-.food-row-one, .food-row-two, .food-row-three {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-/* Individual pizza item style */
-.food-image {
-    height: 300px;
-    width: calc(25% - 25px); /* Four items per row with a 25px gap */
-    margin-right: 40px; /* Gap between items */
-    margin-bottom: 100px; /* Spacing between rows */
-    box-shadow: 0 0 3px #222;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    border-radius: 5px;
-    display: block;
-}
-
-/* Individual pizza item style for small screens (e.g., mobile) */
-@media (max-width: 768px) {
-    .food-image {
-        width: 100%; /* One item per row on small screens */
-        margin-right: 0; /* No gap between items */
-    }
-}
-
-.food-category {
-    text-align: center;
-    z-index: 1;
-}
 
 footer {
     position: fixed;
@@ -373,27 +151,15 @@ footer {
 .main-container{
     display: flex;
 }
-/* Add a class to control the visibility */
-.cart-container.visible {
-    display: block;
-}
-.cart-container {
-    display: none;
-    position: fixed; /* Make the container fixed */
-    top: 250px; /* Adjust the top distance from the viewport top as needed */
-    right: 150px; /* Adjust the right distance from the viewport right as needed */
-    background-color: rgba(128, 128, 128, 0.5);
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    max-height: 700px; /* Set a maximum height for the cart container */
-    overflow-y: auto; /* Add vertical scroll when content exceeds the max height */
-}
 
 label[for="experience"] {
     vertical-align: top;
     display: block;
+    z-index: 1;
+}
+
+.food-category {
+    text-align: center;
     z-index: 1;
 }
 

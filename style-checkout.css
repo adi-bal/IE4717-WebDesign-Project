@@ -336,6 +336,7 @@ align-items: center;
     z-index: 100;
 }
 
+
 footer {
     position: fixed;
     bottom: 0;
@@ -357,23 +358,7 @@ footer {
 .main-container{
     display: flex;
 }
-/* Add a class to control the visibility */
-.cart-container.visible {
-    display: block;
-}
-.cart-container {
-    display: none;
-    position: fixed; /* Make the container fixed */
-    top: 250px; /* Adjust the top distance from the viewport top as needed */
-    right: 150px; /* Adjust the right distance from the viewport right as needed */
-    background-color: rgba(128, 128, 128, 0.5);
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    max-height: 700px; /* Set a maximum height for the cart container */
-    overflow-y: auto; /* Add vertical scroll when content exceeds the max height */
-}
+
 
 
 /* General style for input fields */
@@ -440,3 +425,65 @@ form textarea:focus {
     border-color: #3d85c6;
     box-shadow: 0 0 0 2px rgba(61, 133, 198, 0.2);
 }
+
+/* Add a class to control the visibility */
+.cart-container.visible {
+    display: block;
+}
+.cart-container {
+    display: none;
+    position: fixed; /* Make the container fixed */
+    top: 250px; /* Adjust the top distance from the viewport top as needed */
+    right: 150px; /* Adjust the right distance from the viewport right as needed */
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-height: 700px; /* Set a maximum height for the cart container */
+    overflow-y: auto; /* Add vertical scroll when content exceeds the max height */
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 50vh; /* Set the container to the full viewport height for vertical centering */
+    margin-left: 850px;
+}
+
+.user-details h2 {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+.input-box {
+    width: 100%; /* Make the input boxes take up the full width */
+    text-align: left; /* Align text within input boxes to the left */
+    margin: 10px 0;
+}
+
+/* Specify a fixed width for the input fields */
+.user-details input {
+    width: 300px; /* Adjust the width as needed */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-required {
+    text-align: center; /* Center the content horizontally */
+    position: absolute; /* Position the element absolutely */
+    top: 30%; /* Position the top edge at the vertical center of the viewport */
+    left: 50%; /* Position the left edge at the horizontal center of the viewport */
+    transform: translate(-50%, -50%); /* Center the element perfectly */
+}
+
+
+.login-required button {
+    display: block; /* Display the button as a block element for centering */
+    margin: 0 auto; /* Center the button horizontally */
+    margin-top: 50px;
+}
+

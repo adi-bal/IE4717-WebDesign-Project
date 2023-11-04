@@ -1,65 +1,140 @@
-/* Reset some basic elements */
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "poppins";
+    scroll-behavior: smooth;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: #e8e7e7;
 }
 
-/* Font import for Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-body, html {
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Header Styles */
-.header {
+.header{
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    Left: 0;
     padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background: #e8e7e7;
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+    z-index: 1000;
 }
-
-.header .Logo {
+.header .Logo{
     color: #bb7b05;
-    text-decoration: none;
     font-size: 32px;
     font-weight: 600;
+    text-decoration: none;
 }
-
-.header .Logo span {
+.header a span{
     color: #ad2525;
 }
-
-.header .navbar a {
+.header .navbar a{
     color: #222;
     text-decoration: none;
-    margin: 0 20px;
+    margin-left: 35px;
     font-size: 18px;
     font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-.header .btn {
-    padding: 10px 20px;
+
+.btn{
+    height: 50px;
+    width: 140px;
+    border-radius: 8px;
     background-color: #121b46;
     color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.3s;
+    font-size: 16px;
+    outline: none;
+    border: 2px solid #121b46;
+    cursor:pointer;
+    font-weight: 600;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
 }
 
-.header .btn:hover {
-    background-color: #0d0f2d;
+.btn::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #e8e7e7;
+    height: 100%;
+    width: 00%;
+    z-index: -1;
+    transition: .3s;
+}
+
+.btn:hover:before{
+    width: 100%;
+}
+
+.btn:hover{
+    color: #121b46;
+}
+
+.btn-explore{
+    margin-left: 20px;
+}
+
+section{
+    padding:10rem 9% 2rem ;
+    background: #e8e7e7;
+}
+
+
+.heading{
+    font-size: 36px;
+    text-align: center;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e8e7e7; /* Your desired background color */
+    text-align: left; 
+    padding: 20px; /* Add padding as needed */
+    z-index: 2;
+}
+
+.company-address {
+    position: absolute;
+    bottom: 0;
+    right: 100px; /* Adjust this value to control the right margin */
+    font-size: 15px;
+}
+
+.main-container{
+    display: flex;
+}
+
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        padding-top: 60px;
+    }
+
+    .header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .header .navbar {
+        margin-top: 10px;
+    }
 }
 
 /* Main Container Styles */
@@ -71,12 +146,28 @@ body, html {
     min-height: calc(100vh - 160px); /* Remaining height minus footer and header */
 }
 
+.extra-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.extra-links a {
+    color: #ad2525;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}
+
 .login-section .login-container {
     width: 350px;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     background: #fff;
+    margin-bottom: 200px;
 }
 
 .login-section h2 {
@@ -114,56 +205,4 @@ body, html {
 
 .login-btn:hover {
     background-color: #a08904;
-}
-
-.extra-links {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.extra-links a {
-    color: #ad2525;
-    text-decoration: none;
-    margin: 0 5px;
-}
-
-.extra-links a:hover {
-    text-decoration: underline;
-}
-
-/* Footer Styles */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #e8e7e7;
-    padding: 20px;
-    text-align: left;
-}
-
-footer h2 {
-    color: #222;
-}
-
-.company-address {
-    float: right;
-    color: #666;
-    text-align: right;
-}
-
-@media (max-width: 768px) {
-    .main-container {
-        flex-direction: column;
-        padding-top: 60px;
-    }
-
-    .header {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .header .navbar {
-        margin-top: 10px;
-    }
 }

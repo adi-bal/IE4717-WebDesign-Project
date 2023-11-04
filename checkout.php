@@ -1,6 +1,6 @@
 <?php
-    // Start the session
-    session_start();
+// Start the session
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -27,30 +27,35 @@
         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
         <!-- Display user's full name and logout button -->
         <div class="user-info">
-            <span>Welcome, <?php echo htmlspecialchars($_SESSION['fullname']); ?>!</span>
+            <span>Welcome,
+                <?php echo htmlspecialchars($_SESSION['fullname']); ?>!</span>
             <button class="btn" onclick="location.href='logout.php'">Logout</button>
         </div>
-    <?php else: ?>
+        <?php else: ?>
         <!-- Display login button -->
         <button class="btn" onclick="location.href='login.php'">Login</button>
-    <?php endif; ?>
+        <?php endif; ?>
     </header>
 
     <div class="main-container">
         <section class="Dishes-section">
             <div class="dishGallery">
                 <div class="food-category">
-                    <h2>My Details</h2>
                     <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin']): ?>
                     <form action="submit-order.php" method="post" onsubmit="submitOrder()">
                         <div class="user-details">
+                            <h2>My Details</h2>
                             <div class="input-box">
                                 <span class="details">Full Name</span>
-                                <input type="text" name="fullname" value="<?php echo htmlspecialchars($_SESSION['fullname']); ?>" readonly>
+                                <input type="text" name="fullname"
+                                    value="<?php echo htmlspecialchars($_SESSION['fullname']); ?>"
+                                    readonly>
                             </div>
                             <div class="input-box">
                                 <span class="details">Email</span>
-                                <input type="email" name="email" value="<?php echo htmlspecialchars($_SESSION['email']); ?>" readonly>
+                                <input type="email" name="email"
+                                    value="<?php echo htmlspecialchars($_SESSION['email']); ?>"
+                                    readonly>
                             </div>
                             <div class="input-box">
                                 <span class="details">Mobile Number</span>
@@ -72,8 +77,11 @@
                         </div>
                     </form>
                     <?php else: ?>
-                    <p>You must be logged in to place an order.</p>
-                    <button class="btn" onclick="window.location.href='login.php'">Login</button>
+
+                    <div class="login-required">
+                        <p>You must be logged in to place an order.</p>
+                        <button class="btn" onclick="window.location.href='login.php'">Login</button>
+                    </div>
                     <?php endif; ?>
 
 

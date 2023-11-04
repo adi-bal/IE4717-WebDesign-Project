@@ -66,4 +66,12 @@ function submitOrder() {
     document.getElementById('orderForm').submit();
 }
 
+if (!<?php echo (isset($_SESSION['loggedin']) && $_SESSION['loggedin']) ? 'true' : 'false'; ?>) {
+    const cartContainer = document.getElementById('cart-container');
+    if (cartContainer) {
+        cartContainer.style.display = 'none';
+    }
+}
+
+
 

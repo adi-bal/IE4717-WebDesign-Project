@@ -45,7 +45,6 @@
                 </form>
                 <div class="extra-links">
                     <a href="register.php">Create an Account</a>
-                    <a href="forgot-password.php">Forgot Password?</a>
                 </div>
             </div>
         </section>
@@ -57,7 +56,7 @@
             <div class="company-address">
                 83 Pizza Street 111883 #01-22 <br>
                 See On Google Maps <br>
-                Opening Hours 9 A.M - 9 P.M
+                Opening Hours 9 A.M -9 P.M
             </div>
         </div>
     </footer>
