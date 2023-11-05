@@ -177,7 +177,7 @@ align-items: center;
 
 /* Style for the section title */
 .Dishes-title {
-    text-align: center;
+    text-align: left;
     margin-bottom: 15rem; /* Add some spacing between the title and food rows */
 }
 
@@ -330,13 +330,20 @@ align-items: center;
 }
 
 .food-category {
-    text-align: center;
-    width: 500px; /* Adjust the width according to your design */
-    margin: 0 auto; /* Center the div horizontally */
-    margin-bottom: 230px;
+    background-color: #f7f7f7; /* A light grey background, similar to thermal paper */
+    padding: 20px;
+    text-align: left;
+    width: 400px; /* Narrower width to mimic the typical receipt width */
+    margin: 20px auto; /* Center the div with a smaller top/bottom margin */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for that printed look */
+    font-size: 18px; /* Smaller font size is common on receipts */
+    color: #333; /* Dark grey text to imitate ink */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow to suggest paper's edge */
+    border-left: 4px dashed #ccc; /* Simulate the receipt tear-off edge on one side */
+    border-right: 4px dashed #ccc; /* Simulate the receipt tear-off edge on the other side */
     z-index: 100;
-    font-size: 18px;
 }
+
 
 .food-category h2 {
 margin-bottom: 20px;
