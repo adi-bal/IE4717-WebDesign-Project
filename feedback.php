@@ -63,14 +63,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </nav>
         <!-- Check if the user is logged in -->
         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
-            <!-- Display user's full name and logout button -->
-            <div class="user-info">
-                <span>Welcome, <?php echo htmlspecialchars($_SESSION['fullname']); ?>!</span>
-                <button class="btn" onclick="location.href='logout.php'">Logout</button>
-            </div>
+        <!-- Display user's full name and logout button -->
+        <div class="user-info">
+            <span>Welcome,
+                <?php echo htmlspecialchars($_SESSION['fullname']); ?>!</span>
+            <button class="btn" onclick="location.href='logout.php'">Logout</button>
+        </div>
         <?php else: ?>
-            <!-- Display login button -->
-            <button class="btn" onclick="location.href='login.php'">Login</button>
+        <!-- Display login button -->
+        <button class="btn" onclick="location.href='login.php'">Login</button>
         <?php endif; ?>
     </header>
 
@@ -91,26 +92,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <p> We would love to hear from you!</p>
                     <br><br>
                     <div style="text-align: left;">
-                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                                    <label for="dateOfExperience">Date of Experience:</label>
-                                    <input type="date" id="dateOfExperience" name="dateOfExperience" required
-                                        max="<?php echo date('Y-m-d'); ?>">
-                                    <!-- max attribute to limit future dates -->
-                                    <br><br>
+                        <form method="post"
+                            action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                            <label for="dateOfExperience">Date of Experience:</label>
+                            <input type="date" id="dateOfExperience" name="dateOfExperience" required
+                                max="<?php echo date('Y-m-d'); ?>">
+                            <!-- max attribute to limit future dates -->
+                            <br><br>
 
-                                    <label for="experience">Experience:</label>
-                                    <textarea id="experience" name="experience" rows="4" cols="50" required
-                                        maxlength="1000"></textarea> <!-- maxlength attribute to limit character count -->
-                                    <br><br>
+                            <label for="experience">Experience:</label>
+                            <textarea id="experience" name="experience" rows="4" cols="50" required
+                                maxlength="1000"></textarea> <!-- maxlength attribute to limit character count -->
+                            <br><br>
 
-                                    <button type="submit" id="submitForm">Send</button><br><br>
-                                    <button type="reset" id="clearForm">Clear All</button>
+                            <button class="btn" type="submit" id="submitForm">Send</button><br><br>
+                            <button class="btn" type="reset" id="clearForm">Clear All</button>
                         </form>
                     </div>
 
 
                 </div>
-        </div>
+            </div>
 
 
         </section>

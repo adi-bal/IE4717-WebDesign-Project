@@ -73,7 +73,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzalia</title>
-    <link rel="stylesheet" href="style-checkout.css">
+    <link rel="stylesheet" href="style-receipt.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -97,19 +97,27 @@ $conn->close();
                 <div class="food-category">
                     <h2>Receipt</h2>
                     <p>
-                        We Hope that you enjoy your meal! You will shortly receive an email detailing the contents of your order. <br>
+                        We Hope that you enjoy your meal! You will shortly receive an email detailing the contents of
+                        your order. <br>
 
-                        In the mean time do leave us a feedback by filling out <a href="feedback"> this form</a>, or if you have any enquires
-                        please do not hesistate to <a href="contact.html">contact</a> us.
+                        In the mean time do leave us a feedback by filling out <a href="feedback.php"> this form</a>, or
+                        if
+                        you have any enquires
+                        please do not hesistate to <a href="contact.php">contact</a> us.
                     </p>
 
                     <h3>Your Details</h3>
                     <p>
-                        Name: <?php echo htmlspecialchars($fullname); ?><br>
-                        Contact No: <?php echo htmlspecialchars($mobile); ?><br>
-                        Email Address: <?php echo htmlspecialchars($email); ?><br>
-                        Address: <?php echo htmlspecialchars($address); ?><br>
-                        Delivery Time: <?php echo htmlspecialchars($delivery_time); ?>
+                        Name:
+                        <?php echo htmlspecialchars($fullname); ?><br>
+                        Contact No:
+                        <?php echo htmlspecialchars($mobile); ?><br>
+                        Email Address:
+                        <?php echo htmlspecialchars($email); ?><br>
+                        Address:
+                        <?php echo htmlspecialchars($address); ?><br>
+                        Delivery Time:
+                        <?php echo htmlspecialchars($delivery_time); ?>
                     </p>
 
                 </div>
