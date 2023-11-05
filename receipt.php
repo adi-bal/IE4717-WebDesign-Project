@@ -60,8 +60,6 @@ if ($stmt = $conn->prepare($sql)) {
     exit('Error: SQL statement could not be prepared.');
 }
 
-// Close connection
-$conn->close();
 ?>
 
 
@@ -146,7 +144,63 @@ $conn->close();
         </div>
     </footer>
 
-    <script src="checkout.js"></script>
+
+    </div>
+
+    <?php
+// PHP code to fetch order details from the database
+
+// Send a confirmation email to the user
+$to = 'f31ee@localhost'; // User's email address
+$subject = 'Order Confirmation'; // Email subject
+$message = "Thank you for your order! Your order has been confirmed.\n\n"; // Email message
+$message .= "Order Details:\n";
+$message .= "\nDelivery Information:\n";
+$message .= "Name: $fullname\n";
+$message .= "Contact No: $mobile\n";
+$message .= "Email Address: $email\n";
+$message .= "Address: $address\n";
+$message .= "Delivery Time: $delivery_time\n";
+
+// Fetch cart content from the database
+$sql = "SELECT cart_content, cart_total FROM Orders WHERE order_id = ?";
+if ($stmt = $conn->prepare($sql)) {
+    $stmt->bind_param("i", $order_id);
+
+    if ($stmt->execute()) {
+        $stmt->bind_result($cart_content, $cart_total);
+
+        if ($stmt->fetch()) {
+            // Add the cart_content to the email message
+            $message .= "\nOrder Items:\n";
+            $message .= $cart_content; // Add the entire content as is
+
+            $message .= "\nTotal: $cart_total";
+        }
+    }
+
+    // Close the statement
+    $stmt->close();
+}
+
+$headers = 'From: f32ee@localhost' . "\r\n" .
+'Reply-To: f32ee@localhost' . "\r\n" .
+'X-Mailer: PHP/' . phpversion();
+
+// Send the email
+$mailSent = mail($to, $subject, $message, $headers);
+
+// Close connection
+$conn->close();
+?>
+
+
+</body>
+
+</html>
+
+
+<script src="checkout.js"></script>
 </body>
 
 </html>
