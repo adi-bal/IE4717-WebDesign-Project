@@ -52,10 +52,14 @@ document.addEventListener('DOMContentLoaded', function () {
         checkoutCartContent.innerHTML = 'Your cart is empty';
         checkoutCartTotal.textContent = ''; // Clear the total if the cart is empty
     }
-});
 
+    
 const cartContainer = document.getElementById('cartContainer');
 cartContainer.style.display = 'block';
+
+});
+
+
 
 function submitOrder() {
     // Assuming you're using innerText or innerHTML to store the cart content and total
@@ -66,12 +70,11 @@ function submitOrder() {
     document.getElementById('orderForm').submit();
 }
 
-if (!<?php echo (isset($_SESSION['loggedin']) && $_SESSION['loggedin']) ? 'true' : 'false'; ?>) {
-    const cartContainer = document.getElementById('cart-container');
-    if (cartContainer) {
-        cartContainer.style.display = 'none';
-    }
-}
+
+
+
+
+
 
 
 

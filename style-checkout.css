@@ -345,7 +345,7 @@ footer {
     background-color: #e8e7e7; /* Your desired background color */
     text-align: left; 
     padding: 20px; /* Add padding as needed */
-    z-index: 2;
+    z-index: 200;
 }
 
 .company-address {
@@ -452,6 +452,8 @@ form textarea:focus {
     text-align: center;
     height: 50vh; /* Set the container to the full viewport height for vertical centering */
     margin-left: 850px;
+    margin-top: 50px;
+    z-index: 1;
 }
 
 .user-details h2 {
@@ -470,12 +472,13 @@ form textarea:focus {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    z-index: 1;
 }
 
 .login-required {
     text-align: center; /* Center the content horizontally */
     position: absolute; /* Position the element absolutely */
-    top: 30%; /* Position the top edge at the vertical center of the viewport */
+    top: 45%; /* Position the top edge at the vertical center of the viewport */
     left: 50%; /* Position the left edge at the horizontal center of the viewport */
     transform: translate(-50%, -50%); /* Center the element perfectly */
 }

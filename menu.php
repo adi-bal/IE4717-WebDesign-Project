@@ -1,6 +1,6 @@
 <?php
-    // Start the session
-    session_start();
+// Start the session
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -26,12 +26,13 @@
         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
         <!-- Display user's full name and logout button -->
         <div class="user-info">
-            <span>Welcome, <?php echo htmlspecialchars($_SESSION['fullname']); ?>!</span>
+            <span>Welcome,
+                <?php echo htmlspecialchars($_SESSION['fullname']); ?>!</span>
             <button class="btn" onclick="location.href='logout.php'">Logout</button>
         </div>
         <?php else: ?>
-            <!-- Display login button -->
-            <button class="btn" onclick="location.href='login.php'">Login</button>
+        <!-- Display login button -->
+        <button class="btn" onclick="location.href='login.php'">Login</button>
         <?php endif; ?>
     </header>
 
