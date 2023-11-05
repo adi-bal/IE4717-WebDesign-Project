@@ -54,6 +54,10 @@ body{
     transition: .3s;
 }
 
+.user-info span {
+    margin-right: 15px; /* Adjust the value as needed */
+}
+
 .btn{
     height: 50px;
     width: 140px;

@@ -45,6 +45,10 @@ body{
     border-radius: 5px;
 }
 
+.user-info span {
+    margin-right: 15px; /* Adjust the value as needed */
+}
+
 .btn{
     height: 50px;
     width: 140px;
