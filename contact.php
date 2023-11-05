@@ -42,8 +42,7 @@
 
             <div class="dishGallery">
                 <div class="food-category">
-                    <h2>CONTACT<BR>
-                        US!</h2><br>
+                    <h2>CONTACT US!</h2><br>
                     <p>Here at Pizzalia, we always appreciate your feedback to improve our products and services. If you
                         are experiencing any problems or have questions, suggestions or other comments about our
                         products and services, kindly contact us. If you think we did a great job we'd also love to hear

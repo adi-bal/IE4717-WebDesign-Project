@@ -6,6 +6,13 @@ error_reporting(E_ALL);
 // Start the session
 session_start();
 
+// Check if user is logged in
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    // Redirect to login page if not logged in
+    header("Location: login.php");
+    exit;
+}
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -34,7 +41,11 @@ $stmt->bind_param("ssssssd", $fullname, $email, $mobile, $address, $delivery_tim
 
 // Execute the prepared statement
 if ($stmt->execute()) {
-    echo "New order placed successfully";
+    // Capture the last inserted order ID and store it in the session
+    $_SESSION['id'] = $stmt->insert_id;
+    // Redirect to receipt.php
+    header("Location: receipt.php");
+    exit();
 } else {
     echo "Error: " . $stmt->error;
 }
