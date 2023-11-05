@@ -1,6 +1,42 @@
 <?php
-    // Start the session
-    session_start();
+session_start();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "f34ee";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Get the feedback data from the form
+    $dateOfExperience = $_POST['dateOfExperience'];
+    $experience = $_POST['experience'];
+
+    // Prepare and execute the SQL query to insert feedback into the database
+    $sql = "INSERT INTO feedback (dateOfExperience, experience) VALUES (?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ss", $dateOfExperience, $experience);
+
+    if ($stmt->execute()) {
+        // Feedback successfully inserted
+        header("Location: index.php"); // Redirect to a success page
+        exit();
+    } else {
+        // Error occurred while inserting feedback
+        echo "Error: " . $stmt->error;
+    }
+
+    // Close the database connection
+    $stmt->close();
+    $conn->close();
+}
 ?>
 
 
@@ -55,26 +91,26 @@
                     <p> We would love to hear from you!</p>
                     <br><br>
                     <div style="text-align: left;">
-                        <label for="dateOfExperience">Date of Experience:</label>
-                        <input type="date" id="dateOfExperience" name="dateOfExperience" required
-                            max="<?php echo date('Y-m-d'); ?>">
-                        <!-- max attribute to limit future dates -->
-                        <br><br>
+                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                                    <label for="dateOfExperience">Date of Experience:</label>
+                                    <input type="date" id="dateOfExperience" name="dateOfExperience" required
+                                        max="<?php echo date('Y-m-d'); ?>">
+                                    <!-- max attribute to limit future dates -->
+                                    <br><br>
 
-                        <label for="experience">Experience:</label>
-                        <textarea id="experience" name="experience" rows="4" cols="50" required
-                            maxlength="1000"></textarea> <!-- maxlength attribute to limit character count -->
-                        <br><br>
+                                    <label for="experience">Experience:</label>
+                                    <textarea id="experience" name="experience" rows="4" cols="50" required
+                                        maxlength="1000"></textarea> <!-- maxlength attribute to limit character count -->
+                                    <br><br>
 
-                        <button type="button" id="submitForm">Send</button><br><br>
-                        <button type="button" id="clearForm">Clear All</button>
+                                    <button type="submit" id="submitForm">Send</button><br><br>
+                                    <button type="reset" id="clearForm">Clear All</button>
+                        </form>
                     </div>
 
 
                 </div>
-            </div>
-
-
+        </div>
 
 
         </section>
@@ -93,7 +129,7 @@
         </div>
     </footer>
 
-    <script src="feedback.js"></script>
+
 </body>
 
 </html>

@@ -45,6 +45,20 @@ if (mysqli_query($conn, $sqlOrders)) {
     echo "Error creating table: " . mysqli_error($conn) . "<br>";
 }
 
+// sql to create table for feedback
+$sqlFeedback = "CREATE TABLE IF NOT EXISTS Feedback (
+    feedback_id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    dateOfExperience DATE NOT NULL,
+    experience TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)";
+
+if (mysqli_query($conn, $sqlFeedback)) {
+    echo "Feedback table created successfully<br>";
+} else {
+    echo "Error creating Feedback table: " . mysqli_error($conn) . "<br>";
+}
+
 mysqli_close($conn);
 ?>
 
