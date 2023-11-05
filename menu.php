@@ -41,7 +41,7 @@ session_start();
 
             <div class="dishGallery">
                 <div class="food-category">
-                    <h2>All-time Favourites</h2>
+                    <h2 style="align-text: centre;">All-time Favourites</h2>
                 </div>
                 <div class="food-row-one">
 

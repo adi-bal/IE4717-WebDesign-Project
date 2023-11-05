@@ -87,8 +87,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         you've had a great experience, we value your input. Please take a moment to complete our online
                         feedback form below.</p>
                     <br>
-                    <h1><i>YOUR EXPERIENCE</i></h1>
-                    <hr>
+                    <h1><u>YOUR EXPERIENCE</u></h1>
+                    <br>
                     <p> We would love to hear from you!</p>
                     <br><br>
                     <div style="text-align: left;">
@@ -106,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <br><br>
 
                             <button class="btn" type="submit" id="submitForm">Send</button><br><br>
-                            <button class="btn" type="reset" id="clearForm">Clear All</button>
+                            <button class="btn" style="background-color:red" type="reset" id="clearForm">Clear All</button>
                         </form>
                     </div>
 

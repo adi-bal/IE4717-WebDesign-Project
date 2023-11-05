@@ -104,11 +104,12 @@ section{
 }
 
 .home-section{
-height:40vh;
-width:100%;
-display: flex;
-justify-content: space-between;
-align-items: center;
+    margin-top: 30px;
+    height:40vh;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .home-section .text-content h5{
@@ -130,6 +131,7 @@ align-items: center;
     margin-top: 20px;
 }
 .home-section .image-section img{
+    margin-top: 60px;
     width: 40vw;
     animation: Bounce 4s ease forwards infinite;
 }

@@ -103,68 +103,6 @@ section{
     background: #e8e7e7;
 }
 
-.home-section{
-height:40vh;
-width:100%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-
-.home-section .text-content h5{
-    font-size: 20px;
-    color: #bb7b05;
-    font-weight: 600;
-}
-.home-section .text-content h2{
-    font-size: 75px;
-    color: #3d3f56;
-    font-weight: 500;
-}
-.home-section .text-content p{
-    max-width: 600px;
-    color: #222;
-    font-weight: 500;
-}
-.home-section .text-content .btn{
-    margin-top: 20px;
-}
-.home-section .image-section img{
-    width: 40vw;
-    animation: Bounce 4s ease forwards infinite;
-}
-@keyFrames Bounce{
-    0%{
-        transform: translateY(-24px);
-    }
-    50%{
-        transform: translateY(0px);
-    }
-    100%{
-        transform: translateY(-24px);
-    }
-}
-.home-section .image-section .shadow{
-    background: rgba(0,0,0,.4);
-    height: 20px;
-    border-radius: 50%;
-    box-shadow: 0 0 20px rgba(0,0,0,.4);
-    filter: blur(5px);
-    width: 40vw;
-    animation: BounceIn 4s ease forwards infinite;
-}
-@keyFrames BounceIn{
-    0%{
-        transform: translateY(24px) scale(.5);
-    }
-    50%{
-        transform: translateY(0px);
-    }
-    100%{
-        transform: translateY(24px) scale(.5);
-    }
-}
-
 .Dishes-section{
     display:flex;
     justify-content: space-between;
@@ -437,9 +375,9 @@ form textarea:focus {
 .cart-container {
     display: none;
     position: fixed; /* Make the container fixed */
-    top: 250px; /* Adjust the top distance from the viewport top as needed */
+    top: 250px; 
     right: 150px; /* Adjust the right distance from the viewport right as needed */
-    background-color: rgba(128, 128, 128, 0.5);
+    background-color: rgba(245, 244, 244, 0.5);
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;

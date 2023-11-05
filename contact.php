@@ -39,7 +39,6 @@
 
     <div class="main-container">
         <section class="Dishes-section">
-
             <div class="dishGallery">
                 <div class="food-category">
                     <h2>CONTACT US!</h2><br>
@@ -51,11 +50,12 @@
                     <br>
                     <h2>Ways to contact us:</h2><BR>
                     <h3>1. CALL US</h3><br>
-                    <P>Do give us a call at +65 6888 8888 to speak to a Pizzalia team member</p>
+                    <P>Do give us a call at <b>+65 6888 8888</b> to speak to a Pizzalia team member</p>
                     <br>
                     <br>
                     <h3>2. EMAIL US</h3><br>
-                    <p>Please feel free to send us an email at Pizzalia@gmail.com, and we will make every effort to
+                    
+                    <p>Please feel free to send us an email at <a href="mailto:Pizzalia@gmail.com">Pizzalia@gmail.com,</a> and we will make every effort to
                         ensure that your feedback receives a prompt response.</p>
                     <br>
                     <br>
@@ -65,9 +65,6 @@
                     <p>Singapore 111883</p>
                 </div>
             </div>
-
-
-
 
         </section>
     </div>
