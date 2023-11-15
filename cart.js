@@ -202,7 +202,7 @@ function clearCart() {
 }
 
 function checkout() {
-    // Save cart data to localStorage (you can replace this with your server-side logic)
+    // Save cart data to localStorage
     localStorage.setItem('cartData', JSON.stringify(cart));
 
     // Redirect to the checkout page
