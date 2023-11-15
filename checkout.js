@@ -62,7 +62,7 @@ cartContainer.style.display = 'block';
 
 
 function submitOrder() {
-    // Assuming you're using innerText or innerHTML to store the cart content and total
+    
     document.getElementById('cartContent').value = document.getElementById('checkoutCartContent').innerText;
     document.getElementById('cartTotal').value = total_form;
     
