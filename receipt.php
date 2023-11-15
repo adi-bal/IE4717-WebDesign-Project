@@ -27,7 +27,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Assuming you have the order's ID in session as 'id'
+// Assuming the order's ID in session as 'id'
 $order_id = $_SESSION['id'];
 
 // Prepare a select statement
